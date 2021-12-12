@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        // let arr = [
+        //     ['143500','10500','1500','26350'],
+        //     ['34350','4050','1000','39400'],
+        //     ['6150','4500','3250','13900'],
+        //     ['4920','4500','2250','11670'],
+        //     ['12300','9000','2000','23300'],
+        // ];
+        let arr = new Array(3);
+        let i,j;
+        // Duyệt mảng 2 chiều và nhập liệu
+        alert("Tạo mảng 2 chiều 3 dòng 2 cột");
+        for (i = 0; i < arr.length; i++) {
+            arr[i] = [];
+            for (j = 0; j < 2; j++) {
+                arr[i][j] = parseInt(prompt("Nhập giá trị từng dòng: "));
+            }
+        }
+        // Duyệt và in mảng 2 chiều vừa nhập
+        for (i = 0; i < arr.length; i++) {
+            for (j = 0; j < arr[i].length; j++) {
+                document.write(arr[i][j] + " ");
+            }
+            document.write("<br>");
+        }
+        // Duyệt mảng và in ra giá trị lớn nhất
+        let max = 0;
+        for (i = 0; i < arr.length; i++) {
+            for (j = 0; j < arr[i].length; j++) {
+                if(arr[i][j] > max) max = arr[i][j];
+            }
+        }
+        document.write("Giá trị lớn nhất trong mảng là: " + max);
+        // Duyệt mảng và in tổng các giá trị phần tử của mảng
+        let sum = 0;
+        for (i = 0; i < arr.length; i++) {
+            for (j = 0; j < arr[i].length; j++) {
+                sum += arr[i][j];
+            }
+        }
+        document.write("<br>Tổng các giá trị phần tử trong mảng là: " + sum);
+    </script>
+</body>
+</html>
